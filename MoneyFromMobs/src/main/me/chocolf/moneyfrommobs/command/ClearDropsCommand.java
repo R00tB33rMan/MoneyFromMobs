@@ -34,7 +34,7 @@ public class ClearDropsCommand implements CommandExecutor{
 				if ( entity instanceof Item ) {
 					ItemStack item = ((Item) entity).getItemStack();
 					if (plugin.getPickUpManager().isMoneyPickedUp(item)) {
-						entity.remove();
+						entity.removeAsync();
 						count++;
 					}
 				}
@@ -47,7 +47,7 @@ public class ClearDropsCommand implements CommandExecutor{
 				if (entity instanceof ArmorStand) {
 					ArmorStand armorStand = (ArmorStand) entity;
 					if (armorStand.isInvisible() && armorStand.isMarker() && !armorStand.hasGravity() && armorStand.isCustomNameVisible())
-						armorStand.remove();
+						armorStand.removeAsync();
 				}
 			}
 		}

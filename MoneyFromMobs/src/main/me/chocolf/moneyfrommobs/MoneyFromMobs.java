@@ -143,7 +143,7 @@ public class MoneyFromMobs extends JavaPlugin{
 				if ( entity instanceof ArmorStand ) {
 					ArmorStand armorstand = (ArmorStand) entity;
 					if (armorstand.hasMetadata("mfmas")) {
-						armorstand.remove();
+						armorstand.removeAsync();
 					}
 				}
 			}
